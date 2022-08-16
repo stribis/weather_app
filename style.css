@@ -1,0 +1,162 @@
+/* Variables */
+:root {
+  --light-main-color : #222;
+  --light-background : #fff;
+  --light-heading : rgb(72, 48, 255);
+  --dark-main-color : #fff;
+  --dark-background : #222;
+}
+
+/* Small Reset */
+*::before, *::after, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: var(--light-main-color);
+  background: var(--light-background);
+  transition: 1s;
+  transition-property: background;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: var(--light-heading);
+}
+
+header { 
+  /* position: relative; */
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+header h1 > i {
+  position: absolute;
+  top: 0;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+}
+
+header h1 > i:hover {
+  color: gold;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  visibility: hidden;
+}
+
+form input {
+  font-size: 2rem;
+  padding: 0.3rem 0.6rem;
+}
+
+form input::placeholder {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+main .output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+main .temp {
+  font-size: 2rem;
+}
+
+main .description {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .description .feels {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+main .description p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+main .description ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+main img {
+  border: solid 2px rgb(72, 48, 255);
+  background:rgba(72, 48, 255, 0.2) ;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+ul li i {
+  color: rgb(72, 48, 255);
+}
+
+/* Dark Mode */
+
+body.dark {
+  background: var(--dark-background);
+  color: var(--dark-main-color);
+}
+
+.dark header h1 > i {
+  color: gold;
+}
+
+.dark header h1 > i:hover {
+  color: #fff;
+}
+
+.dark h1{
+  color: #fff;
+}
+
+.dark form input[type="text"] {
+  color: white;
+  background-color: transparent;
+  border: solid 1px white;
+}
+
+.dark form input[type="text"]::placeholder { 
+  color: white;
+}
